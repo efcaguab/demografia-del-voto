@@ -1,0 +1,11 @@
+
+packrat/lib/
+
+packrat/lib-R/
+.Rproj.user
+
+\.DS_Store
+
+\.drake/
+
+data/demographics_df\.rds
