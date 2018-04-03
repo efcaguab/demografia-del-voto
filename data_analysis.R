@@ -1,3 +1,5 @@
+if(!packrat:::isPackratModeOn()) packrat::on()
+
 # workflow library
 library(drake)
 # required packages
