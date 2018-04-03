@@ -18,11 +18,13 @@ prepare_data <- drake_plan(
   encuesta = read_data("./data/encuesta_2018-03-18.csv", factors, candidatos),
   encuesta_prop = as_proportion(encuesta),
   demographics_df = expand_demographics(encuesta_prop, factors),
+  importance = factor_significance(encuesta, factors),
   strings_in_dots = "literals"
 )
 
 write_data <- drake_plan(
   "./data/demographics_df.rds" = saveRDS(demographics_df, "./data/demographics_df.rds"),
+  "./data/importance_df.rds" = saveRDS(importance, "./data/importance_df.rds"),
   file_targets = T,
   strings_in_dots = "literals"
 )
