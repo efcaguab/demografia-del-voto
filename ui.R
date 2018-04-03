@@ -68,6 +68,17 @@ htmlTemplate(
                                "Si, en la consulta de Petro y Caicedo" = "inclusion",
                                "No" = "no.voto"), 
                 width = width_select_inputs),
-  # outputs
-  candidate_rank = tableOutput("candidate_rank")
+
+# button inputs -----------------------------------------------------------
+
+input_partido_verde = 
+  actionLink("i_partido_verde", "partido verde"),
+input_partido_verde = 
+  actionLink("i_partido_polo", "polo"),
+
+# outputs -----------------------------------------------------------------
+
+candidate_rank = tableOutput("candidate_rank"),
+buttons_test = textOutput("buttons_out")
 )
+

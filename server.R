@@ -24,4 +24,5 @@ server <- function(input, output) {
                  estrato = input$i_estrato,
                  genero = input$i_genero)
   })
+  output$buttons_out <- renderPrint(input$i_partido_verde)
 }
