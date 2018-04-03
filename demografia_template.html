@@ -1,21 +1,70 @@
 <!DOCTYPE html>
 <!-- template.html -->
-<html>
-  <head>
-    {{ headContent() }}
-  </head>
-  <body>
-     <div>
-      {{ candidate_rank }}
+<html lang="es">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Add bootstrap style -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <!-- My scripts and style -->
+  <script type="text/javascript" src="www/js-code.js" async></script>
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> {{ headContent() }} -->
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h1 class="display-4">Titulo</h1>
+          <p class="lead">Subtitulo</p>
+        </div>
+      </div>
     </div>
-    <div>
-      {{ input_edad }}
-      {{ input_partido }}
-      {{ input_consulta }}
-      {{ input_estrato }}
-      {{ input_zona }}
-      {{ input_region }}
-      {{ input_genero }}
+  </header>
+
+  <main role="main">
+    <div class="container">
+      <!-- Carrousel -->
+      <div id="carouselControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" id="partido_carrousel">
+            <div class="row", id="partido_row">
+              <script>
+                document.getElementById("partido_row").appendChild(make_option_column("partido", "verde", "www/img/em/green-heart_1f49a.png", "Partido verde", undefined))
+                document.getElementById("partido_row").appendChild(make_option_column("partido", "polo", "www/img/em/yellow-heart_1f49b.png", "Polo 💛", undefined))
+              </script>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <p>Second slide</p>
+          </div>
+          <div class="carousel-item">
+            <p>Third slide</p>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
-  </body>
+  
+  </main>
+
+  <!-- Add bootstrap javascript -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
