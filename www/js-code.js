@@ -35,7 +35,7 @@ function create_button(button_id, div_id, parent, img_alt, img_src, overlay_text
   parent_div.appendChild(emoji_div)
 }
 
-function make_option(factor, level, img_src, option_title, option_text){
+function make_option(factor, level, emoji_char, option_title, option_text){
   
   // Make link
   var link = document.createElement("a")
@@ -45,16 +45,13 @@ function make_option(factor, level, img_src, option_title, option_text){
   var button_id = "i_"
   link.id = button_id.concat(factor, "_", level)
   // Make image
-  var image_element = document.createElement("img")
-  var img_size = "100"
-  image_element.setAttribute("src", img_src)
-  image_element.setAttribute("alt", level)
-  image_element.setAttribute("width", img_size)
-  image_element.setAttribute("height", img_size)
+  var emoji_title = document.createElement("h3")
+  emoji_title.classList.add("display-7")
+  emoji_title.innerText = emoji_char
   // Add image to link
-  link.appendChild(image_element)
+  link.appendChild(emoji_title)
   // Make title
-  var title_element = document.createElement("h3")
+  var title_element = document.createElement("h6")
   title_element.innerText = option_title
   // Add title to link
   link.appendChild(title_element)
