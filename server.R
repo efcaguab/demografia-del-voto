@@ -1,3 +1,5 @@
+if(!packrat:::isPackratModeOn()) packrat::on()
+
 library(dplyr)
 d <- readRDS("./data/demographics_df.rds")
 source("./functions/calculate_probabilities.R")
