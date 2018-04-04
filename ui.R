@@ -51,7 +51,7 @@ htmlTemplate(
                 choices = list("A que partido pertenece?" = "",
                                "Ningun partido" = "no",
                                "Cambio Radical" = "cambio.radical",
-                               "Centro Democrático" = "u",
+                               "Centro Democrático" = "centro.democratico",
                                "Coalición lista de la decencia" = "decencia",
                                "Partido de la U" = "u",
                                "Partido Conservador" = "conservador",
