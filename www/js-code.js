@@ -54,21 +54,17 @@ document.getElementById("estrato_row").appendChild(make_option_column("estrato",
 document.getElementById("estrato_row").appendChild(make_option_column("estrato", "alto", "www/img/em/castle.svg", "Alto", "Estrato 4, 5 y 6"))
 
 document.getElementById("edad_row").appendChild(make_option_column("edad", "18.24", "www/img/em/baby.svg", "18-24", undefined))
-document.getElementById("edad_row").appendChild(make_option_column("edad", "25.34", "www/img/em/boy.svg", "25-34", undefined))
-document.getElementById("edad_row").appendChild(make_option_column("edad", "35.44", "www/img/em/man.svg", "35-44", undefined))
-document.getElementById("edad_row").appendChild(make_option_column("edad", "45.54", "www/img/em/older-adult.svg", "45-54", undefined))
-document.getElementById("edad_row").appendChild(make_option_column("edad", "55", "www/img/em/old-man.svg", ">55", undefined))
+document.getElementById("edad_row").appendChild(make_option_column("edad", "25.44", "www/img/em/man.svg", "25-44", undefined))
+document.getElementById("edad_row").appendChild(make_option_column("edad", "45", "www/img/em/old-man.svg", ">45", undefined))
 
 document.getElementById("region_row").appendChild(make_option_column("region", "bogota", "www/img/em/cityscape.svg", "Bogota", undefined))
 document.getElementById("region_row").appendChild(make_option_column("region", "norte", "www/img/em/beach-with-umbrella.svg", "Norte", "Atlántico, Bolívar, Cesar, Cordoba, Guajira, Magdalena y Sucre"))
-document.getElementById("region_row").appendChild(make_option_column("region", "centrooriental", "www/img/em/national-park.svg", "Centro-oriente", "Boyacá, Caquetá, Cundinamarca, Huila, Meta, Tolima, Santander y Norte de Santander"))
-document.getElementById("region_row").appendChild(make_option_column("region", "cafetera", "www/img/em/mountain.svg", "Cafetera", "Antioquia, Caldas, Quindío y Risaralda"))
+document.getElementById("region_row").appendChild(make_option_column("region", "centrooriental", "www/img/em/national-park.svg", "Centro", "Boyacá, Caquetá, Cundinamarca, Huila, Meta, Tolima, Santander, Norte de Santander, Antioquia, Caldas, Quindío y Risaralda"))
 document.getElementById("region_row").appendChild(make_option_column("region", "suroccidental", "www/img/em/sunrise.svg", "Sur-occidente", "Valle, Cauca, Choco y Nariño"))
 
 
 document.getElementById("consulta_row").appendChild(make_option_column("consulta", "gran", "www/img/em/pig.svg", "Si", "En la consulta de Duque, Ramírez y Ordoñez"))
 document.getElementById("consulta_row").appendChild(make_option_column("consulta", "inclusion", "www/img/em/rat.svg", "Si", "En la consulta de Petro y Caicedo"))
-document.getElementById("consulta_row").appendChild(make_option_column("consulta", "no.consulta", "www/img/em/rooster.svg", "Si", "Pero no en ninguna consulta"))
 document.getElementById("consulta_row").appendChild(make_option_column("consulta", "no", "www/img/em/person-gesturing-no.svg", "No", undefined))
 
 // document.getElementById("partido_row").appendChild(make_option_column("partido", "no", "💔", "Ningún partido", undefined))
