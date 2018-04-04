@@ -1,4 +1,10 @@
 .button_image {
   max-width: 100%;
   height: auto;
+body {
+  background-color: lightyellow;
+}
+
+#container_carrousel_demography {
+  background-color: lightgoldenrodyellow;
 }
