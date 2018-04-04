@@ -34,7 +34,7 @@ function make_option(factor, level, img_src, option_title, option_text){
 
 function make_option_column(factor, level, img_src, option_title, option_text){
   var column_element = document.createElement("div")
-  column_element.classList.add("col")
+  column_element.classList.add("col-4")
   column_element.classList.add("text-center")
   var column_id = factor.concat("_", level, "_col")
   column_element.id = column_id
@@ -42,11 +42,21 @@ function make_option_column(factor, level, img_src, option_title, option_text){
   return column_element
 }
 
+function make_empty_option_column(){
+  var column_element = document.createElement("div")
+  column_element.classList.add("col")
+  return column_element
+}
+
+document.getElementById("genero_row").appendChild(make_empty_option_column())
 document.getElementById("genero_row").appendChild(make_option_column("genero", "femenino", "www/img/em/woman.svg", "Mujer", undefined))
 document.getElementById("genero_row").appendChild(make_option_column("genero", "masculino", "www/img/em/man.svg", "Hombre", undefined))
+document.getElementById("genero_row").appendChild(make_empty_option_column())
 
+document.getElementById("zona_row").appendChild(make_empty_option_column())
 document.getElementById("zona_row").appendChild(make_option_column("zona", "urbano", "www/img/em/woman-office-worker.svg", "Urbano", undefined))
 document.getElementById("zona_row").appendChild(make_option_column("zona", "rural", "www/img/em/woman-farmer.svg", "Rural", undefined))
+document.getElementById("zona_row").appendChild(make_empty_option_column())
 
 document.getElementById("estrato_row").appendChild(make_option_column("estrato", "bajo", "www/img/em/house.svg", "Bajo", "Estrato 1 y 2"))
 document.getElementById("estrato_row").appendChild(make_option_column("estrato", "medio", "www/img/em/house-with-garden.svg", "Medio", "Estrato 3"))
