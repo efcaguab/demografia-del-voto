@@ -1,6 +1,18 @@
 .button_image {
   max-width: 100%;
   height: auto;
+.carousel-indicators {
+  margin-bottom: 0;
+}
+
+.carousel-indicators li {
+  background-color: lightgray;
+}
+
+.carousel-indicators .active {
+  background-color: darkgrey;
+}
+
 body {
   background-color: lightyellow;
 }
