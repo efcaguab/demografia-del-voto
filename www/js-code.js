@@ -65,7 +65,7 @@ document.getElementById("region_row").appendChild(make_option_column("region", "
 
 document.getElementById("consulta_row").appendChild(make_option_column("consulta", "gran", "www/img/em/pig.svg", "Si", "En la consulta de Duque, Ramírez y Ordoñez"))
 document.getElementById("consulta_row").appendChild(make_option_column("consulta", "inclusion", "www/img/em/rat.svg", "Si", "En la consulta de Petro y Caicedo"))
-document.getElementById("consulta_row").appendChild(make_option_column("consulta", "no", "www/img/em/person-gesturing-no.svg", "No", undefined))
+document.getElementById("consulta_row").appendChild(make_option_column("consulta", "no", "www/img/em/prohibited.svg", "No", undefined))
 
 // document.getElementById("partido_row").appendChild(make_option_column("partido", "no", "💔", "Ningún partido", undefined))
 // document.getElementById("partido_row").appendChild(make_option_column("partido", "verde", "💚", "Partido verde", undefined))
