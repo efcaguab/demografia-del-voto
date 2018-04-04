@@ -57,10 +57,8 @@ document.getElementById("edad_row").appendChild(make_option_column("edad", "25.4
 document.getElementById("edad_row").appendChild(make_option_column("edad", "45", "www/img/em/old-man.svg", ">45", undefined))
 
 document.getElementById("region_row").appendChild(make_option_column("region", "bogota", "www/img/em/cityscape.svg", "Bogota", undefined))
-document.getElementById("region_row").appendChild(make_option_column("region", "norte", "www/img/em/beach-with-umbrella.svg", "Norte", "Atlántico, Bolívar, Cesar, Cordoba, Guajira, Magdalena y Sucre"))
 document.getElementById("region_row").appendChild(make_option_column("region", "centrooriental", "www/img/em/national-park.svg", "Centro", "Boyacá, Caquetá, Cundinamarca, Huila, Meta, Tolima, Santander, Norte de Santander, Antioquia, Caldas, Quindío y Risaralda"))
-document.getElementById("region_row").appendChild(make_option_column("region", "suroccidental", "www/img/em/sunrise.svg", "Sur-occidente", "Valle, Cauca, Choco y Nariño"))
-
+document.getElementById("region_row").appendChild(make_option_column("region", "costas", "www/img/em/beach-with-umbrella.svg", "Costas", "Atlántico, Bolívar, Cesar, Cordoba, Guajira, Magdalena, Sucre, Valle, Cauca, Choco y Nariño"))
 
 document.getElementById("consulta_row").appendChild(make_option_column("consulta", "gran", "www/img/em/pig.svg", "Si", "En la consulta de Duque, Ramírez y Ordoñez"))
 document.getElementById("consulta_row").appendChild(make_option_column("consulta", "inclusion", "www/img/em/rat.svg", "Si", "En la consulta de Petro y Caicedo"))
