@@ -23,12 +23,11 @@ function make_option(factor, level, img_src, option_title, option_text){
   title_element.innerText = option_title
   // Add title to link
   link.appendChild(title_element)
-  // Make text if necessary
+  // If there is explanation text add a tooltip
   if (option_text !== undefined){
-    var text_element = document.createElement("p")
-    text_element.classList.add("small")
-    text_element.innerText = option_text
-    link.appendChild(text_element)
+    link.setAttribute("data-toggle", "tooltip")
+    link.setAttribute("title", option_text)
+  } else {
   }
   return link
 }
