@@ -51,3 +51,9 @@ body {
 #container_carrousel_demography {
   background-color: lightgoldenrodyellow;
 }
+
+/* Responsive title */
+#title1, #title2{
+  font-size: 16px;
+  line-height: 80%;
+}
