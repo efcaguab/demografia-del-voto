@@ -38,7 +38,7 @@ function make_option(factor, level, img_src, option_title, option_text){
 
 function make_option_column(factor, level, img_src, option_title, option_text){
   var column_element = document.createElement("div")
-  column_element.classList.add("col-4")
+  column_element.classList.add("col-3")
   column_element.classList.add("text-center")
   column_element.classList.add("pb-4")
   var column_id = factor.concat("_", level, "_col")
