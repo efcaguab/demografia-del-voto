@@ -65,29 +65,44 @@ function make_carousel_caption(caption_text){
   container_element.appendChild(caption_element)
   return container_element
 }
+
 document.getElementById("genero_row").appendChild(make_option_column("genero", "masculino", "www/img/em/man.svg", "Hombre", undefined))
-document.getElementById("genero_row").appendChild(make_empty_option_column())
+document.getElementById("genero_row").appendChild(make_option_column("genero", "femenino", "www/img/em/woman.svg", "Mujer", undefined))
+document.getElementById("genero_row").appendChild(make_option_column("genero", "neutral", "www/img/em/adult.svg", "Meh...", undefined))
+document.getElementById("genero_container").appendChild(make_carousel_caption("Es usted hombre o mujer?"))
 
 document.getElementById("zona_row").appendChild(make_empty_option_column())
-document.getElementById("zona_row").appendChild(make_option_column("zona", "urbano", "www/img/em/woman-office-worker.svg", "Urbano", undefined))
-document.getElementById("zona_row").appendChild(make_option_column("zona", "rural", "www/img/em/woman-farmer.svg", "Rural", undefined))
+document.getElementById("zona_row").appendChild(make_option_column("zona", "urbano", "www/img/em/woman-office-worker.svg", "Ciudad", undefined))
+document.getElementById("zona_row").appendChild(make_option_column("zona", "rural", "www/img/em/woman-farmer.svg", "Campo", undefined))
 document.getElementById("zona_row").appendChild(make_empty_option_column())
+document.getElementById("zona_container").appendChild(make_carousel_caption("Zona urbana o rural?"))
 
 document.getElementById("estrato_row").appendChild(make_option_column("estrato", "bajo", "www/img/em/house.svg", "Bajo", "Estrato 1 y 2"))
 document.getElementById("estrato_row").appendChild(make_option_column("estrato", "medio", "www/img/em/house-with-garden.svg", "Medio", "Estrato 3"))
 document.getElementById("estrato_row").appendChild(make_option_column("estrato", "alto", "www/img/em/castle.svg", "Alto", "Estrato 4, 5 y 6"))
+document.getElementById("estrato_container").appendChild(make_carousel_caption("En qué estrato vive?"))
 
 document.getElementById("edad_row").appendChild(make_option_column("edad", "18.24", "www/img/em/baby.svg", "18-24", undefined))
 document.getElementById("edad_row").appendChild(make_option_column("edad", "25.44", "www/img/em/man.svg", "25-44", undefined))
 document.getElementById("edad_row").appendChild(make_option_column("edad", "45", "www/img/em/old-man.svg", ">45", undefined))
+document.getElementById("edad_container").appendChild(make_carousel_caption("Cuántos años tiene?"))
 
 document.getElementById("region_row").appendChild(make_option_column("region", "bogota", "www/img/em/cityscape.svg", "Bogota", undefined))
 document.getElementById("region_row").appendChild(make_option_column("region", "centrooriental", "www/img/em/national-park.svg", "Centro", "Boyacá, Caquetá, Cundinamarca, Huila, Meta, Tolima, Santander, Norte de Santander, Antioquia, Caldas, Quindío y Risaralda"))
 document.getElementById("region_row").appendChild(make_option_column("region", "costas", "www/img/em/beach-with-umbrella.svg", "Costas", "Atlántico, Bolívar, Cesar, Cordoba, Guajira, Magdalena, Sucre, Valle, Cauca, Choco y Nariño"))
+document.getElementById("region_container").appendChild(make_carousel_caption("En dónde vive?"))
 
-document.getElementById("consulta_row").appendChild(make_option_column("consulta", "gran", "www/img/em/pig.svg", "Si", "En la consulta de Duque, Ramírez y Ordoñez"))
-document.getElementById("consulta_row").appendChild(make_option_column("consulta", "inclusion", "www/img/em/rat.svg", "Si", "En la consulta de Petro y Caicedo"))
-document.getElementById("consulta_row").appendChild(make_option_column("consulta", "no", "www/img/em/prohibited.svg", "No", undefined))
+
+document.getElementById("consulta_row").appendChild(make_option_column("consulta", "gran", "www/img/em/pig.svg", "Duque", "En la consulta de Duque, Ramírez y Ordoñez"))
+document.getElementById("consulta_row").appendChild(make_option_column("consulta", "inclusion", "www/img/em/rat.svg", "Petro", "En la consulta de Petro y Caicedo"))
+document.getElementById("consulta_row").appendChild(make_option_column("consulta", "no", "www/img/em/prohibited.svg", "Ninguna", "No vote por ninguna consulta o no vote en las elecciones de marzo"))
+document.getElementById("consulta_container").appendChild(make_carousel_caption("Votó en la consulta de..."))
+
+
+
+
+
+
 
 // document.getElementById("partido_row").appendChild(make_option_column("partido", "no", "💔", "Ningún partido", undefined))
 // document.getElementById("partido_row").appendChild(make_option_column("partido", "verde", "💚", "Partido verde", undefined))
