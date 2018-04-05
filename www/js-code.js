@@ -6,6 +6,7 @@ function make_option(factor, level, img_src, option_title, option_text){
   link.classList.add("shiny-bound-input")
   link.classList.add("text-dark")
   link.setAttribute("href", "#!")
+  link.setAttribute("onclick", "$('#carrousel_demography').carousel('next')")
   var button_id = "i_"
   link.id = button_id.concat(factor, "_", level)
   // Make image
