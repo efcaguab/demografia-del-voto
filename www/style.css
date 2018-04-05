@@ -38,6 +38,11 @@
   }
 }
 
+/* Background style */
+
+.jumbotron {
+  background-color: transparent;
+}
 
 body {
   background-color: lightyellow;
