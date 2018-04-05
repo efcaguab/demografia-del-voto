@@ -4,6 +4,7 @@ function make_option(factor, level, img_src, option_title, option_text){
   var link = document.createElement("a")
   link.classList.add("action-button")
   link.classList.add("shiny-bound-input")
+  link.classList.add("text-dark")
   link.setAttribute("href", "#")
   var button_id = "i_"
   link.id = button_id.concat(factor, "_", level)
@@ -20,7 +21,8 @@ function make_option(factor, level, img_src, option_title, option_text){
   link.appendChild(image)
   // Make title
   var title_element = document.createElement("h6")
-  title_element.classList.add("small")
+  // title_element.classList.add("small")
+  title_element.classList.add("my-2")
   title_element.innerText = option_title
   // Add title to link
   link.appendChild(title_element)
@@ -37,6 +39,7 @@ function make_option_column(factor, level, img_src, option_title, option_text){
   var column_element = document.createElement("div")
   column_element.classList.add("col-4")
   column_element.classList.add("text-center")
+  column_element.classList.add("pb-4")
   var column_id = factor.concat("_", level, "_col")
   column_element.id = column_id
   column_element.appendChild(make_option(factor, level, img_src, option_title, option_text))
@@ -52,11 +55,14 @@ function make_empty_option_column(){
 function make_carousel_caption(caption_text){
   // Create caption
   var caption_text_element = document.createElement("h5")
+  caption_text_element.classList.add("text-dark")
+  caption_text_element.classList.add("my-0")
   caption_text_element.innerText = caption_text
   // Create caption div
   var caption_element = document.createElement("div")
   caption_element.classList.add("carousel-caption")
   caption_element.classList.add("carousel-caption-demography")
+  caption_element.classList.add("py-2")
   caption_element.appendChild(caption_text_element)
   // Create top container
   var container_element = document.createElement("div")

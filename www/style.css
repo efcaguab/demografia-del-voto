@@ -1,17 +1,43 @@
 .button_image {
   max-width: 100%;
   height: auto;
+}
+
+/* .carousel-item {
+  padding-bottom: 10px; 
+  padding-top: 10px;
+} */
+
+.carousel-caption-demography {
+  position: static;
+  /* padding-top: 0;
+  padding-bottom: 10px; */
+}
+
 .carousel-indicators {
-  margin-bottom: 0;
+
 }
 
 .carousel-indicators li {
-  background-color: lightgray;
+  background-color: lightgrey;
 }
 
 .carousel-indicators .active {
   background-color: darkgrey;
 }
+
+@media (min-width: 768px){
+  .container-medium {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 992px){
+  .container-large {
+    max-width: 720px;
+  }
+}
+
 
 body {
   background-color: lightyellow;
