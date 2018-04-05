@@ -24,5 +24,9 @@ server <- function(input, output) {
                  estrato = input$i_estrato,
                  genero = input$i_genero)
   })
-  output$buttons_out <- renderPrint(input$i_partido_verde)
+  output$buttons_out <- renderPrint(list(
+    a = input$i_genero_masculino, 
+    b = input$i_genero_femenino,
+    c = input$i_zona_urbano
+    ))
 }
