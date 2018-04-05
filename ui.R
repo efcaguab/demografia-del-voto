@@ -69,12 +69,6 @@ htmlTemplate(
                                "No" = "no.voto"), 
                 width = width_select_inputs),
 
-# button inputs -----------------------------------------------------------
-
-input_partido_verde = 
-  actionLink("i_partido_verde", "partido verde"),
-input_partido_verde = 
-  actionLink("i_partido_polo", "polo"),
 
 # outputs -----------------------------------------------------------------
 
