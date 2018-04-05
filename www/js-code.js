@@ -49,8 +49,22 @@ function make_empty_option_column(){
   return column_element
 }
 
-document.getElementById("genero_row").appendChild(make_empty_option_column())
-document.getElementById("genero_row").appendChild(make_option_column("genero", "femenino", "www/img/em/woman.svg", "Mujer", undefined))
+function make_carousel_caption(caption_text){
+  // Create caption
+  var caption_text_element = document.createElement("h5")
+  caption_text_element.innerText = caption_text
+  // Create caption div
+  var caption_element = document.createElement("div")
+  caption_element.classList.add("carousel-caption")
+  caption_element.classList.add("carousel-caption-demography")
+  caption_element.appendChild(caption_text_element)
+  // Create top container
+  var container_element = document.createElement("div")
+  container_element.classList.add("container")
+  container_element.classList.add("text-center")
+  container_element.appendChild(caption_element)
+  return container_element
+}
 document.getElementById("genero_row").appendChild(make_option_column("genero", "masculino", "www/img/em/man.svg", "Hombre", undefined))
 document.getElementById("genero_row").appendChild(make_empty_option_column())
 
