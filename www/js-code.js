@@ -20,6 +20,7 @@ function make_option(factor, level, img_src, option_title, option_text){
   link.appendChild(image)
   // Make title
   var title_element = document.createElement("h6")
+  title_element.classList.add("small")
   title_element.innerText = option_title
   // Add title to link
   link.appendChild(title_element)
