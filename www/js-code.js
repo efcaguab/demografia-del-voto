@@ -74,50 +74,45 @@ function make_carousel_caption(caption_text){
 }
 
 document.getElementById("genero_row").appendChild(make_empty_option_column())
-document.getElementById("genero_row").appendChild(make_option_column("genero", "masculino", "./img/em/man.svg", "Hombre", undefined))
-document.getElementById("genero_row").appendChild(make_option_column("genero", "femenino", "./img/em/woman.svg", "Mujer", undefined))
-document.getElementById("genero_row").appendChild(make_option_column("genero", "neutral", "./img/em/adult.svg", "meh..", undefined))
+document.getElementById("genero_row").appendChild(make_option_column("genero", "masculino", "www/img/em/man.svg", "Hombre", undefined))
+document.getElementById("genero_row").appendChild(make_option_column("genero", "femenino", "www/img/em/woman.svg", "Mujer", undefined))
+document.getElementById("genero_row").appendChild(make_option_column("genero", "neutral", "www/img/em/adult.svg", "meh..", undefined))
 document.getElementById("genero_row").appendChild(make_empty_option_column())
 document.getElementById("genero_container").insertBefore(make_carousel_caption("Soy..."), document.getElementById("genero_container").childNodes[0])
 
 document.getElementById("zona_row").appendChild(make_empty_option_column())
-document.getElementById("zona_row").appendChild(make_option_column("zona", "urbano", "./img/em/woman-office-worker.svg", "Urbana", undefined))
-document.getElementById("zona_row").appendChild(make_option_column("zona", "rural", "./img/em/woman-farmer.svg", "Rural", undefined))
+document.getElementById("zona_row").appendChild(make_option_column("zona", "urbano", "www/img/em/woman-office-worker.svg", "Urbana", undefined))
+document.getElementById("zona_row").appendChild(make_option_column("zona", "rural", "www/img/em/woman-farmer.svg", "Rural", undefined))
 document.getElementById("zona_row").appendChild(make_empty_option_column())
 document.getElementById("zona_container").insertBefore(make_carousel_caption("vivo en una zona..."), document.getElementById("zona_container").childNodes[0])
 
 document.getElementById("estrato_row").appendChild(make_empty_option_column())
-document.getElementById("estrato_row").appendChild(make_option_column("estrato", "bajo", "./img/em/derelict-house.svg", "Bajo", "Estrato 1 y 2"))
-document.getElementById("estrato_row").appendChild(make_option_column("estrato", "medio", "./img/em/house-with-garden.svg", "Medio", "Estrato 3"))
-document.getElementById("estrato_row").appendChild(make_option_column("estrato", "alto", "./img/em/castle.svg", "Alto", "Estrato 4, 5 y 6"))
+document.getElementById("estrato_row").appendChild(make_option_column("estrato", "bajo", "www/img/em/derelict-house.svg", "Bajo", "Estrato 1 y 2"))
+document.getElementById("estrato_row").appendChild(make_option_column("estrato", "medio", "www/img/em/house-with-garden.svg", "Medio", "Estrato 3"))
+document.getElementById("estrato_row").appendChild(make_option_column("estrato", "alto", "www/img/em/castle.svg", "Alto", "Estrato 4, 5 y 6"))
 document.getElementById("estrato_row").appendChild(make_empty_option_column())
 document.getElementById("estrato_container").insertBefore(make_carousel_caption("en una casa de estrato"), document.getElementById("estrato_container").childNodes[0])
 
 document.getElementById("edad_row").appendChild(make_empty_option_column())
-document.getElementById("edad_row").appendChild(make_option_column("edad", "18.24", "./img/em/baby.svg", "18-24", undefined))
-document.getElementById("edad_row").appendChild(make_option_column("edad", "25.44", "./img/em/man.svg", "25-44", undefined))
-document.getElementById("edad_row").appendChild(make_option_column("edad", "45", "./img/em/old-man.svg", ">45", undefined))
+document.getElementById("edad_row").appendChild(make_option_column("edad", "18.24", "www/img/em/baby.svg", "18-24", undefined))
+document.getElementById("edad_row").appendChild(make_option_column("edad", "25.44", "www/img/em/man.svg", "25-44", undefined))
+document.getElementById("edad_row").appendChild(make_option_column("edad", "45", "www/img/em/old-man.svg", ">45", undefined))
 document.getElementById("edad_row").appendChild(make_empty_option_column())
 document.getElementById("edad_container").insertBefore(make_carousel_caption("tengo..."), document.getElementById("edad_container").childNodes[0])
 
 document.getElementById("region_row").appendChild(make_empty_option_column())
-document.getElementById("region_row").appendChild(make_option_column("region", "bogota", "./img/em/cityscape.svg", "Bogotá", undefined))
-document.getElementById("region_row").appendChild(make_option_column("region", "centrooriental", "./img/em/national-park.svg", "Centro", "Boyacá, Caquetá, Cundinamarca, Huila, Meta, Tolima, Santander, Norte de Santander, Antioquia, Caldas, Quindío y Risaralda"))
-document.getElementById("region_row").appendChild(make_option_column("region", "costas", "./img/em/beach-with-umbrella.svg", "Costas", "Atlántico, Bolívar, Cesar, Cordoba, Guajira, Magdalena, Sucre, Valle, Cauca, Choco y Nariño"))
+document.getElementById("region_row").appendChild(make_option_column("region", "bogota", "www/img/em/cityscape.svg", "Bogotá", undefined))
+document.getElementById("region_row").appendChild(make_option_column("region", "centrooriental", "www/img/em/national-park.svg", "Centro", "Boyacá, Caquetá, Cundinamarca, Huila, Meta, Tolima, Santander, Norte de Santander, Antioquia, Caldas, Quindío y Risaralda"))
+document.getElementById("region_row").appendChild(make_option_column("region", "costas", "www/img/em/beach-with-umbrella.svg", "Costas", "Atlántico, Bolívar, Cesar, Cordoba, Guajira, Magdalena, Sucre, Valle, Cauca, Choco y Nariño"))
 document.getElementById("region_row").appendChild(make_empty_option_column())
 document.getElementById("region_container").insertBefore(make_carousel_caption("vivo en..."), document.getElementById("region_container").childNodes[0])
 
 document.getElementById("consulta_row").appendChild(make_empty_option_column())
-document.getElementById("consulta_row").appendChild(make_option_column("consulta", "gran", "./img/em/pig.svg", "Duque", "En la consulta de Duque, Ramírez y Ordoñez"))
-document.getElementById("consulta_row").appendChild(make_option_column("consulta", "inclusion", "./img/em/rat.svg", "Petro", "En la consulta de Petro y Caicedo"))
-document.getElementById("consulta_row").appendChild(make_option_column("consulta", "no", "./img/em/prohibited.svg", "Ninguna", "No vote por ninguna consulta o no vote en las elecciones de marzo"))
+document.getElementById("consulta_row").appendChild(make_option_column("consulta", "gran", "www/img/em/pig.svg", "Duque", "En la consulta de Duque, Ramírez y Ordoñez"))
+document.getElementById("consulta_row").appendChild(make_option_column("consulta", "inclusion", "www/img/em/rat.svg", "Petro", "En la consulta de Petro y Caicedo"))
+document.getElementById("consulta_row").appendChild(make_option_column("consulta", "no", "www/img/em/prohibited.svg", "Ninguna", "No vote por ninguna consulta o no vote en las elecciones de marzo"))
 document.getElementById("consulta_row").appendChild(make_empty_option_column())
-document.getElementById("consulta_container").insertBefore(make_carousel_caption("voté en la consulta de..."), document.getElementById("consulta_container").childNodes[0])
-
-
-
-
-
+document.getElementById("consulta_container").insertBefore(make_carousel_caption("en marzo voté en la consulta de..."), document.getElementById("consulta_container").childNodes[0])
 
 
 // document.getElementById("partido_row").appendChild(make_option_column("partido", "no", "💔", "Ningún partido", undefined))
