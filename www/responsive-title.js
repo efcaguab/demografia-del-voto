@@ -9,5 +9,5 @@ function resize_font(target_element_id, reference_element_id) {
 resize_font("title1", "subtitle")
 resize_font("title2", "subtitle")
 
-$(window).resize(function() { resize_font("title2", "subtitle") });
+// $(window).resize(function() { resize_font("title2", "subtitle") });
 
