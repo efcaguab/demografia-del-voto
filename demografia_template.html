@@ -172,12 +172,20 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
     <script type="text/javascript" src="www/js-code.js" async></script>
-  <!-- Enable tooltips -->
-  <script>
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
-  </script>
-</body>
+    <!-- Footnotes -->
+    <script>
+      jQuery(document).ready(function() {
+    jQuery('[data-toggle="tooltip"]').each(function() {
+        var $elem = jQuery(this);
+        $elem.tooltip({
+            html:true,
+            container: $elem,
+            delay: {hide:400}
+        });
+    });
+});
+      </script>
 
+    <!-- <script src="www/bootstrap-toolkit.min.js"></script> -->
+</body>
 </html>
