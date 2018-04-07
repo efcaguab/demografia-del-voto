@@ -59,3 +59,24 @@ body {
   font-size: 16px;
   line-height: 80%;
 }
+
+/* Footnones */
+body {
+  counter-reset: footnotecounter;
+}
+
+span.footnote:before {
+counter-increment: footnotecounter;
+content: counter(footnotecounter);
+position: relative;
+top: -0.4em;
+}
+
+span.footnote {
+  color: #24B1E6;
+}
+
+/* Mark style */
+mark {
+    background-color: #FEDB67;
+}
