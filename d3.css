@@ -1,0 +1,45 @@
+.candidate {
+  border: 2px solid black;
+  color: white;
+  border-radius: 50%;
+  /* width: 8%;
+  height: 30px; */
+  margin: 1px;
+}
+
+.fajardo {
+  background-color: #008333;
+}
+
+.petro {
+  background-color: #6d356f;
+}
+
+.duque {
+  background-color: #667f9e;
+}
+
+.vargas {
+  background-color: #2e3191;
+}
+
+.delacalle {
+  background-color: rgb(194, 13, 25);
+}
+
+.morales {
+  background-color: #ff6600;
+}
+
+.otros {
+  background-color: grey;
+}
+
+.blanco {
+  background-color: white;
+  color: black;
+}
+
+.cordoba {
+  background-color: rgb(157, 19, 90);
+}
