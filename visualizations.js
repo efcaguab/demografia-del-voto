@@ -7,6 +7,29 @@ var idata = [{ "candidato": "duque", "value": 0.455 }, { "candidato": "petro", "
       dataViz(expanded_data, "#demography-flex")
     }
 
+    var visTotalsSVG = function(idata){
+      var length = 20;
+      var grouped_candidates = group_small_candidates(idata, length);
+      var expanded_data = expand_candidates(grouped_candidates, length);
+      visSVG(expanded_data, "svg", length)
+    }
+
+    var visSVG = function(data, parentSvg, length){
+
+      var xScale = d3.scaleLinear().domain([0,length+2]).range([0,500]);
+      
+      d3.select(parentSvg)
+        .selectAll("circle")
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr("cx", (d,i) => xScale(i+1))
+        .attr("cy", 21)
+        .attr("r", 20)
+        .attr("class", "voter")
+        .attr("class", function (d) { return d3.select(this).attr("class") + " " + d.candidate })
+    }
+
     var dataViz = function (data, parentDiv) {
       d3.select(parentDiv)
         .selectAll("div.candidate")
@@ -109,3 +132,4 @@ var idata = [{ "candidato": "duque", "value": 0.455 }, { "candidato": "petro", "
     }
 
    d3.json("data/totals.json").then(visTotals)
+   d3.json("data/totals.json").then(visTotalsSVG)

@@ -7,39 +7,62 @@
   margin: 1px;
 }
 
+.voter {
+  stroke: black;
+  stroke-width: 1;
+}
+body{
+  --fajardo-color: #008333;
+  --petro-color: #6d356f;
+  --duque-color: #667f9e;
+  --vargas-color: #2e3191;
+  --delacalle-color: rgb(194, 13, 25);
+  --morales-color: #ff6600;
+  --cordoba-color: rgb(157, 19, 90);
+}
+
 .fajardo {
-  background-color: #008333;
+  background-color: var(--fajardo-color);
+  fill: var(--fajardo-color);
 }
 
 .petro {
-  background-color: #6d356f;
+  background-color: var(--petro-color);
+  fill: var(--petro-color);
 }
 
 .duque {
-  background-color: #667f9e;
+  background-color: var(--duque-color);
+  fill: var(--duque-color);
 }
 
 .vargas {
-  background-color: #2e3191;
+  background-color: var(--vargas-color);
+  fill: var(--vargas-color);
 }
 
 .delacalle {
-  background-color: rgb(194, 13, 25);
+  background-color: var(--delacalle-color);
+  fill: var(--delacalle-color);
 }
 
 .morales {
-  background-color: #ff6600;
+  background-color: var(--morales-color);
+  fill: var(--morales-color);
 }
 
 .otros {
   background-color: grey;
+  fill:grey;
 }
 
 .blanco {
   background-color: white;
+  fill:white;
   color: black;
 }
 
 .cordoba {
-  background-color: rgb(157, 19, 90);
+  background-color: var(--cordoba-color);
+  fill:var(--cordoba-color);
 }
