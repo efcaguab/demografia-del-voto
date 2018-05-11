@@ -97,6 +97,9 @@
             <p>Aún así, incluso con esas muestras relativalente pequeñas las encuestas el problema principal no es el tamaño de la muestra sino su sesgo. Cáda vez es más dificl diseñar una muestra que sea representativa de la población en general.</p>
             <p>
              Veamos por ejemplo los resultados de la última encuesta de Semana:</p>
+             <div class="ball-vis-container">
+               <svg class="ball-vis" id="vis-totales" style="width:100%; height:100%;" viewBox="0 0 1000 50"></svg>
+             </div>
           </div>
           <div class="col order-first order-lg-last pb-3">
             <!-- <img src='www/img/GeneralPerkyEyas-size_restricted.gif' width="100%"> -->
@@ -223,7 +226,11 @@
       });
     });
   </script>
-
+  <script src="js/circle-visualisation.js"></script>
+  <script>
+  d3.json("data/totals.json").then(function(data) {make_circles(data, "#vis-totales", 100)})
+  </script>
   <!-- <script src="www/bootstrap-toolkit.min.js"></script> -->
 </body>
+
 </html>
