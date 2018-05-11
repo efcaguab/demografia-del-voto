@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- template.html -->
 <html lang="es">
+
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -9,9 +10,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
   <!-- My scripts and style -->
-  <link rel="stylesheet" type="text/css" href="www/style.css"> 
+  <link rel="stylesheet" type="text/css" href="www/style.css">
+  <link rel="stylesheet" type="text/css" href="d3.css">
   <script src="www/d3/d3.js"></script>
-  
+
   <!-- Shiny header -->
   <!-- {{ headContent() }} -->
 </head>
@@ -31,94 +33,97 @@
       </div>
       <div class="container container-medium">
         <div class="flex" id="subtitle">
-          <p class="lead text-muted">Las encuestas son el pán de cada día en la previa a las elecciones. Pareciera que cáda día es más dificl confiar en
-            A pesar de los grandes Sin embargo, son la ún
+          <p class="lead text-muted">Las encuestas son el pán de cada día en la previa a las elecciones. Pareciera que cáda día es más dificl confiar
+            en A pesar de los grandes Sin embargo, son la ún
             <em>Pero, el problema son las encuestas ó es cómo las estamos usando.</em>
           </p>
         </div>
-      </div> 
+      </div>
     </div>
     <!-- Introduction -->
     <div class="container container-large py-5" id="introduction">
       <div class="row">
         <div class="col">
-          <p>Las encuestas son el pán de cada día en la previa a las elecciones. A fecha de hoy ya son casi treinta las encuestas presidenciales que se han realizado en Colombia. Si el ritmo actual continúa, para el día de las elecciones, este 27 de Mayo, se habrán publicado unas 50. Le parecen muchas? Si lo comparamos con las 270 encuestas que se realizaron en Estados Unidos tan solo entre las convenciones partidistas y las elecciones de Noviembre<span class='footnote' data-toggle="tooltip" title="Más exactamente entre el 29 de julio y el 7 de noviembre de 2016. Vea la lista completa en <a href='https://en.wikipedia.org/wiki/Nationwide_opinion_polling_for_the_United_States_presidential_election,_2016' target='_blank'>wikipedia</a>."></span> en realidad no son tantas.</p>
-          <p>Pero da igual si estamos en Colombia, Estados Unidos o Nueva Zelanda. En todas partes la historia de cada una de estas encuestas es más o menos la misma. Comienza cuando algún medio de comunicación<span class="footnote" data-toggle="tooltip" title="En Colombia solo hay cinco alianzas con recursos suficientes para contratar encuestas: 1) Caracol Radio y Red+ Noticias; 2) Caracol TV, Blu Radio y Semana; 3) El Tiempo y W Radio; 4) RCN; 5) Noticiero CM&"></span> contrata una firma encuestadora para "predecir" las elecciones. Lo hacen porque las encuestas venden. Lo queramos o no la política despierta pasiones como pocas otras cosas. Estar en una u otra vertiente política hace parte de nuestra identidad. Al igual que el fútbol o la religión, la política nos dá un sentido de pertenencia que, como verá mas adelante,  o cruza las fronteras de la edad, genero y clase, <mark>o por el contrario las refuerza</mark><span class="footnote" data-toggle="tooltip" title="Inspirado en las palabras de Christine Emba hablando del <a href='https://www.washingtonpost.com/news/in-theory/wp/2016/03/14/why-do-we-care-about-sports-so-much/?utm_term=.4a3c015bf384' target='_blank'>culto a los deportes</a> en USA."></span>.</p>
-          <p>La história de la encuesta continua. La firma encuestadora se encarga de buscar personas que podrían responder la encuesta. Luego los llama por teléfono, o los visita en la casa y si la persona esta de buen genio y tiene tiempo se deja hacer las preguntas. El diablo está en los detalles y escoger una muestra personas que sea representativa y al mismo tiempo aleatoria no  es nada fácil. A veces algo falla y los resultados no reflejan la realidad.</p>
-          <p>La firma encuestadora termina su trabajo y entrega los resultados al medio de comunicación que se la encargó. Los medios enumeran los resultados de la encuesta al pie de la letra; los artículos de opinión abundan, pero ningúno de los periodistas de planta se atreve a cuestionar que tan exacta de la encuesta. La mitad del país esta contenta porque Fulanito, su candidato, repuntó y ahora "va ganando". La otra mitad está furibinda y anuncia que de todos modos la encuesta estaba vendida.</p> 
-          <p>Fast-forward al día de las elecciones. Fulanito, el candidato de las encuestas, pierde. Los medios de comunicación se apresuran a exlicar el fenómeno electoral. Y mientras tanto sentimos que nos mintieron. Nos queda la impresión de que las encuestas, al final de cuentas, no sirven para nada.</p>
+          <p>
+            Lo queramos o no la política despierta pasiones como pocas otras cosas. Estar en una u otra vertiente política hace parte
+            de nuestra identidad. Al igual que el fútbol o la religión, la política nos dá un sentido de pertenencia que,
+            como verá mas adelante, o cruza las fronteras de la edad, genero y clase,
+            <mark>o por el contrario las refuerza</mark>.
+          </p>
+          <p>Y como la política despierta pasiones, las encuestas venden. Son el pán de cada día en la previa a las elecciones. Para dar un ejemplo a fecha de hoy ya son casi treinta las encuestas presidenciales que se han realizado en Colombia. 
+
+          </p>
+          <p>
+            La historia de cada una de estas encuestas es más o menos la misma. Comienza cuando algún medio de comunicación
+            <span
+              class="footnote" data-toggle="tooltip" title="En Colombia solo hay cinco alianzas con recursos suficientes para contratar encuestas: 1) Caracol Radio y Red+ Noticias; 2) Caracol TV, Blu Radio y Semana; 3) El Tiempo y W Radio; 4) RCN; 5) Noticiero CM&"></span> contrata una firma encuestadora para "predecir" las elecciones. La firma encuestadora  llama por teléfono, o visita gente en la casa y si la persona esta de buen genio y tiene
+            tiempo se deja hacer las preguntas. Luego, de que la firma encuestadora compila las estadísticas, el medio de comunicación enumera los resultados al pie de la letra; los artículos de opinión abundan, pero ningúno
+            de los periodistas de planta se atreve a cuestionar que tan exacta de la encuesta. La mitad del país esta contenta
+            porque Fulanito, su candidato, repuntó y ahora "va ganando". La otra mitad está furibinda y anuncia que de todos
+            modos la encuesta estaba vendida.</p>
+          <p>Fast-forward al día de las elecciones. Fulanito, el candidato de las encuestas, pierde. Los medios de comunicación
+            se apresuran a exlicar el fenómeno electoral. Y mientras tanto sentimos que nos mintieron. Nos queda la impresión
+            de que las encuestas, al final de cuentas, no sirven para nada.</p>
         </div>
       </div>
     </div>
-     <!-- Encuestas en crisis -->
-     <div class="container-fluid" style="background-color: lightgoldenrodyellow">
-        <div class="container py-5" id="la-crisis">
-            <div class="row">
-              <div class="col-lg-8">
-                  <h2>La crisis</h2>
-                  <p>La história se repite frecuentemente. Y cáda vez nos es mas dificil confiar en las encuestas. A la cabeza se nos vienen algunos de los desatinos más recientes: Trump, Brexit y el Referendo de la Paz. Sin duda grandes fiascos.</p>      
-              </div>
-              <div class="col"></div>
-            </div>
-            <div class="row align-items-start">
-              <div class="col-lg-8 order-last order-lg-first">
-                  <p>Parece un problema reciente pero no lo es. Durante las elecciones presidenciales de 2014, seis encuestas diferentes fueron publicadas dias previos a la primera vuelta. Todas acertaron a decir quien pasaba a segunda vuelta. Pero cuatro, un 66%, indicaban que la mayoría de votos iba para Santos. Una semana después Zuluaga aventajo a Santos por medio millon de votos. Tan solo un mes despues, algo similar pasó en la segunda vuelta. Entre las cinco encuestas que se realizaron solo dos le atinaron a la victoria de Santos<span class="footnote" data-toggle="tooltip" title="<img src='www/img/santos-bailando.gif' width='100%'>"></span>.</p>
-                  <p>Cuál es el problema? Por qué fallan tanto? En esencia hay dos razones por las que una encuesta puede ser mala: el <em>tamaño de la muestra</em> y el <em>sesgo</em>.</p>
-                  <p>El tamaño de esta muestra depende de cuanta plata esté dispuesto a pagar el medio de comunicación que contrata la encuesta. Las encuestas son bastante caras y por eso la muestra rara vez supera el 0.01% de la población. Es decir, en el mejor de los casos le preguntan a 1 de cada 10,000 personas<span class="footnote" data-toggle="tooltip" title="En Colombia, para las elecciones de 2018 la muestra ha variado entre 900 y 3,500 personas. Según la registraduría a enero de 2018 <a href='https://wsr.registraduria.gov.co/-Censo-Electoral,3661-.html' target='_blank'>el censo electoral</a> está conformado por un poco más de 36 millones de personas."></span>.</p>
-                  <p>Piense en eso... es como si para saber cuál es la opinion de todo su barrio le hubieran preguntado al azar a <b>una sola persona</b>. Una sola. Hacer encuestas no es nada fácil. </p>
-                    <p>Aún así, las encuestas son por ahora el único medio que nos hemos inventado para entender lo que pasa por la cabeza la gente y cómo eso se puede ver reflejado en unas elecciones.</p>
-                  <p>El problema es que </p>
-              </div>
-              <div class="col order-first order-lg-last">
-                <!-- <img src='www/img/GeneralPerkyEyas-size_restricted.gif' width="100%"> -->
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-8">
-                  
-
-              </div>
-              <div class="col"></div>
-            </div>
+    <!-- Encuestas en crisis -->
+    <div class="container-fluid" style="background-color: lightgoldenrodyellow">
+      <div class="container py-5" id="la-crisis">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>La crisis</h2>
+            <p>La história se repite frecuentemente. Y cáda vez nos es mas dificil confiar en las encuestas. A la cabeza se
+              nos vienen algunos de los desatinos más recientes: Trump, Brexit y el Referendo de la Paz. Sin duda grandes
+              fiascos.</p>
           </div>
+          <div class="col"></div>
+        </div>
+        <div class="row align-items-start">
+          <div class="col-lg-8 order-last order-lg-first">
+            <p>Parece un problema reciente pero no lo es. Durante las elecciones presidenciales de 2014, seis encuestas diferentes
+              fueron publicadas dias previos a la primera vuelta. Todas acertaron a decir quien pasaba a segunda vuelta.
+              Pero cuatro, un 66%, indicaban que la mayoría de votos iba para Santos. Una semana después Zuluaga aventajo
+              a Santos por medio millon de votos. Tan solo un mes despues, algo similar pasó en la segunda vuelta. Entre
+              las cinco encuestas que se realizaron solo dos le atinaron a la victoria de Santos
+              <span class="footnote" data-toggle="tooltip"
+                title="<img src='www/img/santos-bailando.gif' width='100%'>"></span>.</p>
+            <p>Cuál es el problema? Por qué fallan tanto? En esencia hay una encuesta es tan mala o tan buena como su muestra. Las muestras de la mayoría de encuestas electorales hoy en día tienen dos problemas, uno grande y uno chico. El problema grande es el <em>sesgo</em> y el problema chico es el <em>tamaño</em></p>
+            <p>Empezemos por el problema chico, el tamaño de esta muestra. Las encuestas son bastante caras y por eso la muestra rara vez supera el 0.01% de la población.
+              Es decir, en el mejor de los casos le preguntan a 1 de cada 10,000 personas
+              <span class="footnote" data-toggle="tooltip"
+                title="En Colombia, para las elecciones de 2018 la muestra ha variado entre 900 y 3,500 personas. Según la registraduría a enero de 2018 <a href='https://wsr.registraduria.gov.co/-Censo-Electoral,3661-.html' target='_blank'>el censo electoral</a> está conformado por un poco más de 36 millones de personas."></span>. Piense en eso... es como si para saber cuál es la opinion de todo su barrio le hubieran preguntado al azar a
+              <b>una sola persona</b>. Una sola.</p>
+            <p>Aún así, incluso con esas muestras relativalente pequeñas las encuestas el problema principal no es el tamaño de la muestra sino su sesgo. Cáda vez es más dificl diseñar una muestra que sea representativa de la población en general.</p>
+            <p>
+             Veamos por ejemplo los resultados de la última encuesta de Semana:</p>
+          </div>
+          <div class="col order-first order-lg-last pb-3">
+            <!-- <img src='www/img/GeneralPerkyEyas-size_restricted.gif' width="100%"> -->
+          </div>
+        </div>
+      </div>
 
-     </div>
-    
+    </div>
 
-    <!-- <div class="container" id="container_stats">
-        <style>
+    <div class="container-fluid">
+      <div class="container py-5" id="la-crisis">
+          <div class="row">
+              <div class="col"></div>
+              <div class="col-lg-8">
+                  <h2>La solucion</h2>
+                  <p>La história se repite frecuentemente. Y cáda vez nos es mas dificil confiar en las encuestas. A la cabeza se
+                    nos vienen algunos de los desatinos más recientes: Trump, Brexit y el Referendo de la Paz. Sin duda grandes
+                    fiascos.</p>
+                </div>
+          </div>
+        </div>
+      </div>
 
-            .chart div {
-              font: 10px sans-serif;
-              background-color: steelblue;
-              text-align: right;
-              padding: 3px;
-              margin: 1px;
-              color: white;
-            }
-            
-            </style>
-            <div class="chart"></div>
-            <script>
 
-                var data = [4, 8, 15, 16, 23, 42];
-                
-                var x = d3.scaleLinear()
-                    .domain([0, d3.max(data)])
-                    .range([0, 380]);
-                
-                d3.select(".chart")
-                  .selectAll("div")
-                    .data(data)
-                  .enter().append("div")
-                    .style("width", function(d) { return x(d) + "px"; })
-                    .text(function(d) { return d; });
-                
-                </script>
-    </div> -->
 
     <!-- Carrousel container -->
-    <div class="container container-medium", id="container_carrousel_demography">
+    <div class="container container-medium" , id="container_carrousel_demography">
       <!-- Carrousel -->
       <div id="carrousel_demography" class="carousel slide" data-interval="false">
         <ol class="carousel-indicators my-0">
@@ -162,10 +167,12 @@
             </div>
           </div>
           <div class="carousel-item" id="start_again_carrousel">
-              <div class="container" id="start_again_container">
-                <div class="row" , id="start_again_row"> <p>Start again</p></div>
+            <div class="container" id="start_again_container">
+              <div class="row" , id="start_again_row">
+                <p>Start again</p>
               </div>
             </div>
+          </div>
           <!-- <div class="carousel-item" id="partido_carrousel">
             <div class="container" id="partido_container">
               <div class="row" , id="partido_row"></div>
@@ -187,7 +194,7 @@
       <div class="p-0 border" id="flex-7"style="width:100%"><img class="img-fluid" src="www/img/em/castle.svg"></div>
 
     </div> -->
-    
+
 
     <!-- {{ buttons_test}} -->
   </main>
@@ -199,24 +206,24 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-    <!-- My javascript for the buttons -->
-    <script type="text/javascript" src="www/js-code.js" async></script>
-    <!-- REsponsive title  -->
-    <script src="www/responsive-title.js"></script>
-    <!-- Footnotes -->
-    <script>
-      jQuery(document).ready(function() {
-    jQuery('[data-toggle="tooltip"]').each(function() {
+  <!-- My javascript for the buttons -->
+  <script type="text/javascript" src="www/js-code.js" async></script>
+  <!-- REsponsive title  -->
+  <script src="www/responsive-title.js"></script>
+  <!-- Footnotes -->
+  <script>
+    jQuery(document).ready(function () {
+      jQuery('[data-toggle="tooltip"]').each(function () {
         var $elem = jQuery(this);
         $elem.tooltip({
-            html:true,
-            container: $elem,
-            delay: {hide:400}
+          html: true,
+          container: $elem,
+          delay: { hide: 400 }
         });
+      });
     });
-});
-      </script>
+  </script>
 
-    <!-- <script src="www/bootstrap-toolkit.min.js"></script> -->
+  <!-- <script src="www/bootstrap-toolkit.min.js"></script> -->
 </body>
 </html>
