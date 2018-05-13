@@ -98,7 +98,7 @@
             <p>
              Veamos por ejemplo los resultados de la última encuesta de Semana:</p>
              <div class="ball-vis-container">
-               <svg class="ball-vis" id="vis-totales" style="width:100%; height:100%;" viewBox="0 0 1000 50"></svg>
+               <svg class="ball-vis" id="vis-totales" style="width:100%; height:100%;"></svg>
              </div>
           </div>
           <div class="col order-first order-lg-last pb-3">
@@ -228,7 +228,7 @@
   </script>
   <script src="js/circle-visualisation.js"></script>
   <script>
-  d3.json("data/totals.json").then(function(data) {make_circles(data, "#vis-totales", 100)})
+  d3.json("data/totals.json").then(function(data) {make_circles(data, "#vis-totales", 10, 1)})
   </script>
   <!-- <script src="www/bootstrap-toolkit.min.js"></script> -->
 </body>

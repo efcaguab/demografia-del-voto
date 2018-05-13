@@ -21,7 +21,7 @@ body{
   --cordoba-color: rgb(157, 19, 90);
 }
 
-.fajardo {
+/* .fajardo {
   background-color: var(--fajardo-color);
   fill: var(--fajardo-color);
 }
@@ -65,4 +65,4 @@ body{
 .cordoba {
   background-color: var(--cordoba-color);
   fill:var(--cordoba-color);
-}
+} */
